@@ -1,0 +1,101 @@
+ .u-section-1 {
+  background-image: url("images/IMG_20210320_153319.jpg");
+  background-position: 50% 50%;
+  background-size: auto 125%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 665px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 577px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 522px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 494px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 461px;
+  }
+} .u-section-2 {
+  background-image: none;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 198px;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 1.125rem;
+  background-image: none;
+  font-style: italic;
+  margin: 48px 360px 0 332px;
+}
+
+.u-section-2 .u-text-2 {
+  font-family: Amiko;
+  font-size: 1.25rem;
+  margin: 24px auto 38px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 211px;
+  }
+
+  .u-section-2 .u-text-1 {
+    margin-top: 60px;
+    margin-left: 232px;
+    margin-right: 260px;
+    width: 477px;
+  }
+
+  .u-section-2 .u-text-2 {
+    margin-top: 11px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 .u-text-1 {
+    margin-left: 122px;
+    margin-right: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-text-1 {
+    margin-left: 32px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 231px;
+  }
+
+  .u-section-2 .u-text-1 {
+    width: auto;
+    margin-top: 52px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-2 .u-text-2 {
+    margin-bottom: 0;
+  }
+}
