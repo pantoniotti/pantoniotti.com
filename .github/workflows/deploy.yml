@@ -26,11 +26,17 @@ jobs:
         
       - name: Check the deploy key
         run: cat ~/.ssh/deploy
-        
+        shell: bash
+
       - name: Install the known hosts
         run: 'echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts'
+        shell: bash
+
+      - name: Check the known hosts
+        run: cat ~/.ssh/known hosts
+        shell: bash
 
       - name: Deploy code
         run: ssh -i ~/.ssh/deploy phil@pantoniotti.com
-    
+        shell: bash
     
