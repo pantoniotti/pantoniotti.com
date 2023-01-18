@@ -17,22 +17,17 @@ jobs:
       
       - name: Create the ssh directory
         run: mkdir ~/.ssh && chmod 700 ~/.ssh
-        shell: bash
 
       - name: Install the deploy key
         run: echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy
-        shell: bash
         
       - name: Check the deploy key
         run: cat ~/.ssh/deploy
-        shell: bash
         
       - name: Install the known hosts
         run: echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-        shell: bash
 
       - name: Deploy code
         run: ssh -i ~/.ssh/deploy phil@pantoniotti.com
-        shell: bash
     
     
