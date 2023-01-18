@@ -1,5 +1,6 @@
  .u-section-1 {
   background-image: url("images/IMG_20210320_153319.jpg");
+  background-position: 50% 50%;
 }
 
 .u-section-1 .u-sheet-1 {
@@ -33,21 +34,22 @@
 }
 
 .u-section-2 .u-sheet-1 {
-  min-height: 205px;
+  min-height: 189px;
 }
 
 .u-section-2 .u-text-1 {
-  font-size: 1.125rem;
-  background-image: none;
-  font-style: italic;
   width: 448px;
-  margin: 47px auto 0;
+  font-size: 1.125rem;
+  font-style: italic;
+  background-image: none;
+  margin: 41px auto 0;
 }
 
 .u-section-2 .u-text-2 {
-  font-family: Amiko;
-  font-size: 1.25rem;
-  margin: 24px auto 47px;
+  font-size: 1.125rem;
+  background-image: none;
+  font-weight: 700;
+  margin: 24px auto 0;
 }
 
 @media (max-width: 1199px) {
@@ -57,6 +59,11 @@
 
   .u-section-2 .u-text-1 {
     width: 477px;
+  }
+
+  .u-section-2 .u-text-2 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
   }
 }
 
