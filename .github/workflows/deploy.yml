@@ -5,6 +5,8 @@ name: Deploy
 on:
   push:
     branches: [ master ]
+
+  workflow_dispatch:  
     
 jobs:
   build:
@@ -15,12 +17,18 @@ jobs:
       
       - name: Create the ssh directory
         run: mkdir ~/.ssh && chmod 700 ~/.ssh
-        
+        shell: bash
+
       - name: Install the deploy key
-        run: echo secrets.DEPLOY_KEY > ~/.ssh/deploy
+        run: echo ${{ secrets.DEPLOY_KEY }} > ~/.ssh/deploy
+        shell: bash
         
+      - name: Install the known hosts
+        run: echo ${{ secretd.KNOWN_HOSTS }} > ~/.ssh/known_hosts
+        shell: bash
+
       - name: Deploy code
-        run: ssh -i ~/ssh/deploy phil@157.230.63.44
-      
+        run: ssh -i ~/ssh/deploy phil@pantoniotti.com
+        shell: bash
     
     
