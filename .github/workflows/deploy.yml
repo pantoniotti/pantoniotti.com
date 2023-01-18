@@ -33,7 +33,7 @@ jobs:
         shell: bash
 
       - name: Check the known hosts
-        run: cat ~/.ssh/known hosts
+        run: cat ~/.ssh/known_hosts
         shell: bash
 
       - name: Deploy code
