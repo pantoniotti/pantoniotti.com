@@ -1,0 +1,26 @@
+# Deploy workflow
+
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Create the ssh directory
+        run: mkdir ~/.ssh && chmod 700 ~/.ssh
+        
+      - name: Install the deploy key
+        run: echo secrets.DEPLOY_KEY > ~/.ssh/deploy
+        
+      - name: Deploy code
+        run: ssh -i ~/ssh/deploy phil@157.230.63.44
+      
+    
+    
