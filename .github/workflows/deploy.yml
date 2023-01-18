@@ -20,11 +20,11 @@ jobs:
         shell: bash
 
       - name: Install the deploy key
-        run: echo ${{ secrets.DEPLOY_KEY }} > ~/.ssh/deploy
+        run: echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy
         shell: bash
         
       - name: Install the known hosts
-        run: echo ${{ secrets.KNOWN_HOSTS }} > ~/.ssh/known_hosts
+        run: echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
         shell: bash
 
       - name: Deploy code
