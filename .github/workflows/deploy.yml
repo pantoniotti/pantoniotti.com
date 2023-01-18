@@ -19,13 +19,16 @@ jobs:
         run: mkdir ~/.ssh && chmod 700 ~/.ssh
 
       - name: Install the deploy key
-        run: echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy
+        run: 'echo "$SSH_KEY" > ~/.ssh/deploy'
+        shell: bash
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_KEY }}
         
       - name: Check the deploy key
         run: cat ~/.ssh/deploy
         
       - name: Install the known hosts
-        run: echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+        run: 'echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts'
 
       - name: Deploy code
         run: ssh -i ~/.ssh/deploy phil@pantoniotti.com
